@@ -65,16 +65,12 @@ public class Main {
         Logger.getGlobal().info("finished");
         */
 
+        /*
+        //CHAPTER 8
         String middle = ArrayAlg.getMiddle("sc", "Wce", "wecw");
         System.out.println(middle);
 
-        LocalDate[] ld =
-                {
-                        LocalDate.of(1906, 12, 9),
-                        LocalDate.of(1945, 2, 2),
-                        LocalDate.of(1985, 8, 1),
-                        LocalDate.of(2001, 11, 19),
-                };
+        LocalDate[] ld = { LocalDate.of(1906, 12, 9), LocalDate.of(1945, 2, 2), LocalDate.of(1985, 8, 1), LocalDate.of(2001, 11, 19), };
 
         Pair<LocalDate> mm = ArrayAlg.minmax(ld);
 
@@ -93,6 +89,20 @@ public class Main {
         Pair<? super Manager> sworkers = new Pair<>(ceo, cfo);
         sworkers.setFirst(ex);
 
+        Class<String> cls = String.class;
+        String s = cls.cast("Hello");
+        System.out.println(s);
+        //classCastException
+        //s = cls.cast(ceo)!=null ? "for" : "hg";
+        System.out.println(s);
+
+        try {
+            Pair<Employee> pe = ArrayAlg.makePair(Employee.class);
+            pe.getFirst().setName("qwwwwwww");
+            System.out.println(pe.getFirst().getName());
+        } catch (InstantiationException | IllegalAccessException e){}
+
+        */
 
     }
 }

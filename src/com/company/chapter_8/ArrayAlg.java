@@ -25,4 +25,8 @@ public class ArrayAlg {
         }
         return new Pair<T>(min, max);
     }
+
+    public static <T> Pair<T> makePair(Class<T> c) throws InstantiationException, IllegalAccessException{
+        return new Pair<>(c.newInstance(), c.newInstance());
+    }
 }
