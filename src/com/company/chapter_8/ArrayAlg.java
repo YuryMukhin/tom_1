@@ -1,11 +1,12 @@
 package com.company.chapter_8;
 
-
+import java.util.function.Supplier;
 
 /**
  * Created by ymukhin on 9/1/2017.
  */
 public class ArrayAlg {
+
     public static <T> T getMiddle(T... a){
         return a[a.length/2];
     }

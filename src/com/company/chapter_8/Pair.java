@@ -1,5 +1,7 @@
 package com.company.chapter_8;
 
+import java.util.function.Supplier;
+
 /**
  * Created by ymukhin on 9/1/2017.
  */
@@ -17,6 +19,14 @@ public class Pair<T> {
         this.second = second;
     }
 
+    public static <T> Pair<T> makePair(Supplier<T> constr){
+        return new Pair<T>(constr.get(), constr.get());
+    }
+/*
+    public boolean equals(T value){
+        return first.equals(value) && second.equals(value);
+    }
+*/
     public T getFirst() {
         return first;
     }

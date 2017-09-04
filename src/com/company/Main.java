@@ -2,8 +2,7 @@ package com.company;
 
 import com.company.chapter_6.*;
 import com.company.chapter_7.StackTraceTest;
-import com.company.chapter_8.ArrayAlg;
-import com.company.chapter_8.Pair;
+import com.company.chapter_8.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -81,5 +80,19 @@ public class Main {
 
         System.out.println(mm.getFirst());
         System.out.println(mm.getSecond());
+
+        Pair<String> p = Pair.makePair(String::new);
+
+        Employee cfo = new Employee("Nick");
+        Manager ceo = new Manager("Harry", 15000);
+        Executive ex = new Executive("Yury", 120000, "CEO");
+        Pair<Manager> workers = new Pair<>(ceo, ceo);
+        Pair<? extends Employee> nworkers = workers;
+        //nworkers.setFirst(cfo); //error
+
+        Pair<? super Manager> sworkers = new Pair<>(ceo, cfo);
+        sworkers.setFirst(ex);
+
+
     }
 }
