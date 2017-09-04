@@ -9,7 +9,7 @@ public class ArrayAlg {
 
     public static final String className = "ArrayAlg";
     public static final String className1 = "ArrayAlg111";
-
+    public static final String className11 = "ArrayAlg1111111";
 
     public static <T> T getMiddle(T... a){
         return a[a.length/2];
