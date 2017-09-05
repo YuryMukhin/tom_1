@@ -11,11 +11,10 @@ import java.lang.reflect.Array;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
 import java.time.LocalDate;
-import java.util.Arrays;
-import java.util.Comparator;
+import java.util.*;
 import java.util.Comparator.*;
-import java.util.Scanner;
 import java.lang.ClassLoader;
+import java.util.List;
 import java.util.logging.Logger;
 
 public class Main {
@@ -103,6 +102,27 @@ public class Main {
         } catch (InstantiationException | IllegalAccessException e){}
 
         */
+
+        /*
+        //CHAPTER 9
+        List<String> staff =  new LinkedList<>();
+        staff.add("Amy");
+        staff.add("Bob");
+        staff.add("Carl");
+        ListIterator<String> it = staff.listIterator();
+        it.next();
+        it.set("Juliet");
+
+        for (String i: staff) {
+            System.out.println(i);
+        }
+
+        List nw = Collections.checkedList(staff, String.class);
+        nw.add(new Employee());
+
+        //Collections.unmodifiableList(staff).add("sdrger");
+    */
+
 
     }
 }
