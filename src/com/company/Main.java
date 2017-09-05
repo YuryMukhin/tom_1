@@ -11,11 +11,10 @@ import java.lang.reflect.Array;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
 import java.time.LocalDate;
-import java.util.Arrays;
-import java.util.Comparator;
+import java.util.*;
 import java.util.Comparator.*;
-import java.util.Scanner;
 import java.lang.ClassLoader;
+import java.util.List;
 import java.util.logging.Logger;
 
 public class Main {
@@ -65,16 +64,12 @@ public class Main {
         Logger.getGlobal().info("finished");
         */
 
+        /*
+        //CHAPTER 8
         String middle = ArrayAlg.getMiddle("sc", "Wce", "wecw");
         System.out.println(middle);
 
-        LocalDate[] ld =
-                {
-                        LocalDate.of(1906, 12, 9),
-                        LocalDate.of(1945, 2, 2),
-                        LocalDate.of(1985, 8, 1),
-                        LocalDate.of(2001, 11, 19),
-                };
+        LocalDate[] ld = { LocalDate.of(1906, 12, 9), LocalDate.of(1945, 2, 2), LocalDate.of(1985, 8, 1), LocalDate.of(2001, 11, 19), };
 
         Pair<LocalDate> mm = ArrayAlg.minmax(ld);
 
@@ -92,6 +87,41 @@ public class Main {
 
         Pair<? super Manager> sworkers = new Pair<>(ceo, cfo);
         sworkers.setFirst(ex);
+
+        Class<String> cls = String.class;
+        String s = cls.cast("Hello");
+        System.out.println(s);
+        //classCastException
+        //s = cls.cast(ceo)!=null ? "for" : "hg";
+        System.out.println(s);
+
+        try {
+            Pair<Employee> pe = ArrayAlg.makePair(Employee.class);
+            pe.getFirst().setName("qwwwwwww");
+            System.out.println(pe.getFirst().getName());
+        } catch (InstantiationException | IllegalAccessException e){}
+
+        */
+
+        /*
+        //CHAPTER 9
+        List<String> staff =  new LinkedList<>();
+        staff.add("Amy");
+        staff.add("Bob");
+        staff.add("Carl");
+        ListIterator<String> it = staff.listIterator();
+        it.next();
+        it.set("Juliet");
+
+        for (String i: staff) {
+            System.out.println(i);
+        }
+
+        List nw = Collections.checkedList(staff, String.class);
+        nw.add(new Employee());
+
+        //Collections.unmodifiableList(staff).add("sdrger");
+    */
 
 
     }

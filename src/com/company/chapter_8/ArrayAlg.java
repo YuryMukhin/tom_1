@@ -8,6 +8,8 @@ import java.util.function.Supplier;
 public class ArrayAlg {
 
     public static final String className = "ArrayAlg";
+    public static final String className1 = "ArrayAlg111";
+    public static final String className11 = "ArrayAlg1111111";
 
     public static <T> T getMiddle(T... a){
         return a[a.length/2];
@@ -22,5 +24,9 @@ public class ArrayAlg {
             if (max.compareTo(a[i])>0) max = a[i];
         }
         return new Pair<T>(min, max);
+    }
+
+    public static <T> Pair<T> makePair(Class<T> c) throws InstantiationException, IllegalAccessException{
+        return new Pair<>(c.newInstance(), c.newInstance());
     }
 }
